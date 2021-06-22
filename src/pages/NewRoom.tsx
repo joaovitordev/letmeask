@@ -1,17 +1,18 @@
+
+// import { useAuth } from '../hooks/useAuth';
+
 import { Link } from 'react-router-dom';
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
-import googleIconImg from '../assets/images/google-icon.svg';
+
+import { Button } from '../components/Button';
+
 
 import '../styles/auth.scss';
-import { Button } from '../components/Button';
-import { useContext } from 'react';
-import { AuthContext } from '../App';
 
 export function NewRoom() {
-
-    const { user } = useContext(AuthContext);
+    // const { user } = useAuth();
 
     return (
         <div id="page-auth">
@@ -23,7 +24,6 @@ export function NewRoom() {
             <main>
                 <div className="main-content">
                     <img src={logoImg} alt="Logo" />
-                    <h1>{user?.name}</h1>
                     <h2>Criar uma nova sala</h2>
                     <div className="separator">ou entre em uma sala</div>
                     <form>
